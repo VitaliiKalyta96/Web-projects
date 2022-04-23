@@ -1,0 +1,28 @@
+body {
+    background-image: url("https://wpapers.ru/wallpapers/Music/13973/1920x1080_%D0%9D%D0%BE%D1%82%D1%8B.jpg");
+    text-align: center;
+}
+
+.locate {
+    padding-top: 20px;
+    text-align: center;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+.btn {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.btn:focus {
+  outline: transparent;
+}
