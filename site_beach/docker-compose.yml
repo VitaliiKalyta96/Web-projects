@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  web-app:
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
+    container_name: 'web-site'
+    volumes:
+      - .:/application
+    ports:
+      - "9090:9090"
+#    networks:
+#      - app
+#    depends_on:
+#      - db
+
+
+  nginx:
+    image: nginx:1.19-alpine
+    ports:
+      - "9092:90"
+    volumes:
+      - ./docker/nginx:/etc/nginx/conf.d
+    networks:
+      - app
+    depends_on:
+      - web-app
+
+networks:
+  app:
+    driver: bridge
